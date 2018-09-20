@@ -1,4 +1,4 @@
-# TFG
-Este repositorio contendrá todo el código referido al TFG.
+# ShoppingList
+Este repositorio contendrá todo el código referido al ejemplo realizado en Udemy.
 
-El TFG que voy a presentar es una Tienda Web hecha en el lenguaje de Ionic.
+Consiste en una pequeña aplicacion web que añade, elimina y modifica elementos de firebase.
