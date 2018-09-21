@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="primary"> <!--Poner el color azul-->
+    <ion-title>
+      Shopping List
+    </ion-title>
+
+    <ion-buttons end>
+      <button navPush="AddShoppingItemPage" ion-button> <!-- navPush es la funcionalidad que le vamos a dar al botón en este caso añadir un elemento más a la página.-->
+        <ion-icon name="add"></ion-icon> <!-- Añade el boton del más-->
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list> <!-- CONTENIDO DE LA BASE DE DATOS -->
+    <ion-list-header>
+      Items
+    </ion-list-header>
+    <!-- Es un for con el que recorro los datos que me devuelve la bd. 
+      Con detail-push añadios la flechita para entrar.
+      Con navPush hacemos que si pincha encima editemos el contenido para ello le enviamos los datos y además el item que se está mostrando en ese momento.-->
+    <ion-item *ngFor="let item of shoppingList$ | async" detail-push navPush="EditShoppingItemPage" [navParams]="{item: item}"> 
+      {{item.name}}
+    </ion-item>
+  </ion-list>
+</ion-content>
